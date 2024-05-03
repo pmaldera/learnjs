@@ -1,6 +1,6 @@
 const {sumWithForEach, sumWithReduce, sumWithFor} = require('./exercise.js');
 
-describe('sumWithFor', () => {
+describe('array `sumWithFor` exercise', () => {
     const arr = [1, 2, 3];
     const spyReduce = jest.spyOn(arr, 'reduce');
     const spyForEach = jest.spyOn(arr, 'forEach');
@@ -18,7 +18,7 @@ describe('sumWithFor', () => {
     });
 })
 
-describe('`sumWithReduce`', () => {
+describe('array `sumWithReduce` exercise', () => {
     const arr = [1, 2, 3];
     const spy = jest.spyOn(arr, 'reduce');
     const result = sumWithReduce(arr);
@@ -33,7 +33,7 @@ describe('`sumWithReduce`', () => {
 })
 
 
-describe('`sumWithForEach`', () => {
+describe('array `sumWithForEach` exercise', () => {
     const arr = [1, 2, 3];
     const spy = jest.spyOn(arr, 'forEach');
     const result = sumWithForEach(arr);
