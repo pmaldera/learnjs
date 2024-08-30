@@ -1,6 +1,7 @@
-const {Car} = require('./exercise.js');
+const {Car, Octavia} = require('./exercise.js');
 
 const car = new Car(1, 'brand', 'blue');
+const octavia = new Octavia(2, 'red');
 
 describe('Classes basics exercise', () => {
     test("The `Car` class must have a public property called `brand` and its constructor must set a value for this property (if one is given).", () => {
@@ -38,6 +39,18 @@ describe('Classes basics exercise', () => {
     test("The `Car` class must have one public method called `getTaxedPrice` with one parameter `tax`. This method should return the Car price multiplied by the `tax` parameter value.", () => {
         car.price = 1
         expect(car.getTaxedPrice(10)).toBe(10)
+    });
+
+    test("The `Octavia` class must implement a constructor that uses the `Car` class constructor through the `super` keyword", () => {
+        expect(octavia instanceof Car).toBe(true);
+    });
+
+    test("Any `Octavia` instance must have a brand property with the value 'Skoda'", () => {
+        expect(octavia.brand).toBe("Skoda");
+    });
+
+    test("The `Ocatvia` class must reimplement the `getRegistrationNumber` which will return the instance registrationNumber followed by '-OCT'. Once again the `super` keyword might help you.", () => {
+        expect(octavia.getRegistrationNumber()).toBe('2-OCT');
     });
 });
 
